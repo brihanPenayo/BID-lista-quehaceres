@@ -1,11 +1,14 @@
 import React from 'react'
+import Tarea from '../Tarea/Tarea';
 
 const ListaDeTareas = ({ lista }) => {
     return (
         <div>
             {lista.map((tarea, idx) => {
                 return (
-                    <p key={idx}>{tarea.nombre}</p>
+
+                    <Tarea tarea={tarea} key={idx} />
+
                 );
             })}
         </div>

@@ -5,13 +5,20 @@ import ListaDeTareas from '../ListaDeTareas/ListaDeTareas'
 
 const FormTareas = () => {
     const tareaInicial = {
-        nombre: "Lavar los platos",
-        descripcion: "Lavar todos los cubiertos",
-        estado: "false",
+        titulo: "",
+        descripcion: "",
+        estado: false
     }
 
     const [tarea, setTarea] = useState(tareaInicial)
-    const [ListaTareas, setListaTareas] = useState([tarea])
+    const [ListaTareas, setListaTareas] = useState([])
+
+    const handleTarea = (e) => {
+        setTarea({
+            ...tarea,
+            [e.target.name]: e.target.value
+        })
+    }
 
     const handleLista = (e) => {
         e.preventDefault();
@@ -20,7 +27,7 @@ const FormTareas = () => {
     return (
         <>
             <form onSubmit={handleLista}>
-                < Inputs />
+                < Inputs onChange={handleTarea} tarea={tarea} />
             </form>
             <ListaDeTareas lista={ListaTareas} />
         </>
