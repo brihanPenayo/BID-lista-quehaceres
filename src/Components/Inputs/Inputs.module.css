@@ -1,0 +1,17 @@
+.form {
+    display: flex;
+    margin: 2rem;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.form>div {
+    align-items: center;
+    display: flex;
+    gap: 0.5rem
+}
+
+.form>div>input,button {
+    padding: 0.5rem;
+}

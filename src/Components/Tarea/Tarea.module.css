@@ -1,0 +1,43 @@
+.tarea,
+.titulo,
+.opciones {
+    display: flex;
+}
+
+.tarea {
+    flex-direction: column;
+    gap: 1rem;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    padding: 1rem 0;
+}
+
+.check {
+    height: 20px;
+    width: 20px;
+}
+
+.titulo {
+    padding: 0 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.eliminar {
+    bottom: 0.5rem;
+    right: 2rem;
+    background: 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.opciones {
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.titulo>h2 {
+    max-width: 70%;
+    overflow: hidden;
+}
